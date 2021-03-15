@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:layout_width="match_parent"
+        android:text="@string/adduser"
+        local:MvxBind="Click AddUserClick"
+        android:layout_height="wrap_content"/>
+    <MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
+        android:id="@+id/alerts_list"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/medium"
+        android:layout_marginEnd="@dimen/medium"
+        android:layout_height="match_parent"
+        local:MvxItemTemplate ="@layout/item_users"
+        local:MvxBind="ItemsSource Users" />
+</LinearLayout>
